@@ -6,10 +6,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/ropnop/gokrb5/client"
-	"github.com/ropnop/gokrb5/config"
-	"github.com/ropnop/gokrb5/keytab"
-	"github.com/ropnop/gokrb5/test/testdata"
+	"github.com/creep33/gokrb5/client"
+	"github.com/creep33/gokrb5/config"
+	"github.com/creep33/gokrb5/keytab"
+	"github.com/creep33/gokrb5/test/testdata"
 )
 
 const (

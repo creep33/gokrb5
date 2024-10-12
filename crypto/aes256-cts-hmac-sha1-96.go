@@ -6,11 +6,11 @@ import (
 	"crypto/sha1"
 	"hash"
 
-	"github.com/ropnop/gokrb5/crypto/common"
-	"github.com/ropnop/gokrb5/crypto/rfc3961"
-	"github.com/ropnop/gokrb5/crypto/rfc3962"
-	"github.com/ropnop/gokrb5/iana/chksumtype"
-	"github.com/ropnop/gokrb5/iana/etypeID"
+	"github.com/creep33/gokrb5/crypto/common"
+	"github.com/creep33/gokrb5/crypto/rfc3961"
+	"github.com/creep33/gokrb5/crypto/rfc3962"
+	"github.com/creep33/gokrb5/iana/chksumtype"
+	"github.com/creep33/gokrb5/iana/etypeID"
 )
 
 // RFC 3962

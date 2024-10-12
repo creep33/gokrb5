@@ -6,10 +6,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ropnop/gokrb5/iana/nametype"
-	"github.com/ropnop/gokrb5/krberror"
-	"github.com/ropnop/gokrb5/messages"
-	"github.com/ropnop/gokrb5/types"
+	"github.com/creep33/gokrb5/iana/nametype"
+	"github.com/creep33/gokrb5/krberror"
+	"github.com/creep33/gokrb5/messages"
+	"github.com/creep33/gokrb5/types"
 )
 
 // sessions hold TGTs and are keyed on the realm name

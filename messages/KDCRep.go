@@ -8,16 +8,16 @@ import (
 	"time"
 
 	"github.com/jcmturner/gofork/encoding/asn1"
-	"github.com/ropnop/gokrb5/config"
-	"github.com/ropnop/gokrb5/credentials"
-	"github.com/ropnop/gokrb5/crypto"
-	"github.com/ropnop/gokrb5/iana/asnAppTag"
-	"github.com/ropnop/gokrb5/iana/flags"
-	"github.com/ropnop/gokrb5/iana/keyusage"
-	"github.com/ropnop/gokrb5/iana/msgtype"
-	"github.com/ropnop/gokrb5/iana/patype"
-	"github.com/ropnop/gokrb5/krberror"
-	"github.com/ropnop/gokrb5/types"
+	"github.com/creep33/gokrb5/config"
+	"github.com/creep33/gokrb5/credentials"
+	"github.com/creep33/gokrb5/crypto"
+	"github.com/creep33/gokrb5/iana/asnAppTag"
+	"github.com/creep33/gokrb5/iana/flags"
+	"github.com/creep33/gokrb5/iana/keyusage"
+	"github.com/creep33/gokrb5/iana/msgtype"
+	"github.com/creep33/gokrb5/iana/patype"
+	"github.com/creep33/gokrb5/krberror"
+	"github.com/creep33/gokrb5/types"
 )
 
 type marshalKDCRep struct {

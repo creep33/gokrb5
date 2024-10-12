@@ -38,6 +38,12 @@ func DisablePAFXFAST(b bool) func(*Settings) {
 	}
 }
 
+func SetpreAuthEType(etype int32) func(*Settings) {
+	return func(s *Settings) {
+		s.preAuthEType = etype
+	}
+}
+
 // DisablePAFXFAST indicates is the client should disable the use of PA_FX_FAST.
 func (s *Settings) DisablePAFXFAST() bool {
 	return s.disablePAFXFast

@@ -15,12 +15,12 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ropnop/gokrb5/client"
-	"github.com/ropnop/gokrb5/config"
-	"github.com/ropnop/gokrb5/keytab"
-	"github.com/ropnop/gokrb5/service"
-	"github.com/ropnop/gokrb5/test"
-	"github.com/ropnop/gokrb5/test/testdata"
+	"github.com/creep33/gokrb5/client"
+	"github.com/creep33/gokrb5/config"
+	"github.com/creep33/gokrb5/keytab"
+	"github.com/creep33/gokrb5/service"
+	"github.com/creep33/gokrb5/test"
+	"github.com/creep33/gokrb5/test/testdata"
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/jcmturner/goidentity.v3"
 )

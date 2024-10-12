@@ -4,6 +4,7 @@ package keytab
 import (
 	"bytes"
 	"encoding/binary"
+	"encoding/hex"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -13,8 +14,8 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ropnop/gokrb5/v8/crypto"
-	"github.com/ropnop/gokrb5/v8/types"
+	"github.com/creep33/gokrb5/v8/crypto"
+	"github.com/creep33/gokrb5/v8/types"
 )
 
 const (
@@ -122,6 +123,41 @@ func (kt Keytab) String() string {
 		s += entry.String() + "\n"
 	}
 	return s
+}
+
+// AddEntry adds an entry to the keytab with a precomputed hash. The hash should be provided in hex format.
+func (kt *Keytab) AddEntryWithHash(principalName, realm, hash string, ts time.Time, KVNO uint8, encType int32) error {
+	princ, _ := types.ParseSPNString(principalName)
+
+	hashBytes, err := hex.DecodeString(hash)
+	if err != nil {
+		panic(err)
+	}
+	key := types.EncryptionKey{
+		KeyType:  encType,
+		KeyValue: hashBytes,
+	}
+	// Populate the keytab entry principal
+	ktep := newPrincipal()
+	ktep.NumComponents = int16(len(princ.NameString))
+	if kt.version == 1 {
+		ktep.NumComponents += 1
+	}
+
+	ktep.Realm = realm
+	ktep.Components = princ.NameString
+	ktep.NameType = princ.NameType
+
+	// Populate the keytab entry
+	e := newEntry()
+	e.Principal = ktep
+	e.Timestamp = ts
+	e.KVNO8 = KVNO
+	e.KVNO = uint32(KVNO)
+	e.Key = key
+
+	kt.Entries = append(kt.Entries, e)
+	return nil
 }
 
 // AddEntry adds an entry to the keytab. The password should be provided in plain text and it will be converted using the defined enctype to be stored.

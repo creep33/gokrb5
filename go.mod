@@ -1,4 +1,4 @@
-module github.com/ropnop/gokrb5
+module github.com/creep33/gokrb5
 
 go 1.15
 

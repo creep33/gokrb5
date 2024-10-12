@@ -8,9 +8,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ropnop/gokrb5/crypto/common"
-	"github.com/ropnop/gokrb5/crypto/etype"
-	"github.com/ropnop/gokrb5/iana/etypeID"
+	"github.com/creep33/gokrb5/crypto/common"
+	"github.com/creep33/gokrb5/crypto/etype"
+	"github.com/creep33/gokrb5/iana/etypeID"
 	"gopkg.in/jcmturner/aescts.v1"
 )
 

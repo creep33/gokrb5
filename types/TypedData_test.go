@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/ropnop/gokrb5/iana/patype"
-	"github.com/ropnop/gokrb5/test/testdata"
+	"github.com/creep33/gokrb5/iana/patype"
+	"github.com/creep33/gokrb5/test/testdata"
 	"github.com/stretchr/testify/assert"
 )
 

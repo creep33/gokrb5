@@ -12,12 +12,12 @@ import (
 	"net/http/httptest"
 	"os"
 
-	"github.com/ropnop/gokrb5/client"
-	"github.com/ropnop/gokrb5/config"
-	"github.com/ropnop/gokrb5/keytab"
-	"github.com/ropnop/gokrb5/service"
-	"github.com/ropnop/gokrb5/spnego"
-	"github.com/ropnop/gokrb5/test/testdata"
+	"github.com/creep33/gokrb5/client"
+	"github.com/creep33/gokrb5/config"
+	"github.com/creep33/gokrb5/keytab"
+	"github.com/creep33/gokrb5/service"
+	"github.com/creep33/gokrb5/spnego"
+	"github.com/creep33/gokrb5/test/testdata"
 	"gopkg.in/jcmturner/goidentity.v3"
 )
 
